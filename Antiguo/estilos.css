@@ -1,0 +1,141 @@
+.contenedor {
+    min-height: 200px;
+    border: 1px solid black;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.contenedor div {
+    background-color: black;
+    position: absolute;
+    border-radius: 4px;
+}
+
+#monoTorso{
+    height: 50px;
+    width: 100px;
+    top: 10px;
+    z-index: 1;
+}
+
+#monoBrazoI, #monoBrazoD {
+    height: 80px;
+    width: 30px;
+    z-index: 2;
+}
+
+#monoBrazoI{
+    top: 20px;
+    rotate: 15deg;
+    left: 35px;
+}
+
+#monoBrazoD{
+    top: 20px;
+    rotate: -15deg;
+    right: 35px;
+}
+
+#monoTrasero{
+    height: 60px;
+    width: 60px;
+    top: 60px;
+}
+
+#monoPiernaI, #monoPiernaD {
+    height: 100px;
+    width: 30px;
+    z-index: 3;
+}
+
+#monoPiernaI {
+    top: 80px;
+    left: 65px;
+    rotate: 5deg;
+}
+
+#monoPiernaD {
+    top: 80px;
+    right: 65px;
+    rotate: -5deg;
+}
+
+#monoRayaArriba, #monoRayaAbajo {
+    z-index: 4;
+    height: 10px;
+    width: 60px;
+}
+
+#monoRayaArriba {
+    top: 55px;
+}
+
+#monoRayaAbajo {
+    top: 75px;
+}
+
+
+.contenedor.casco div{
+    transform: skew(350deg);
+    top: 20px;
+    height: 120px;
+}
+
+#cascoFrente{
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 30px 20px 30px 20px;
+}
+
+#cascoVisera{
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(to right, black, gray);
+    top: 65px;
+    left: 24px;
+    border: 1px solid black;
+    z-index: 2;
+}
+
+#cascoRaya1{
+    width: 20px;
+    right: 100px;
+}
+
+#cascoRaya2{
+    width: 20px;
+    right: 70px;
+}
+
+#cascoRaya3{
+    width: 40px;
+    right: 22px;
+    border-radius: 0px 20px 30px 0px;
+}
+
+input[type='color'] {
+    min-height: 70px;
+    border-radius: 10px;
+}
+
+.mono{
+    margin: 0px;
+    font-size: smaller;
+    font-weight: 500;
+    color: darkgreen;
+}
+.casco{
+    margin: 0px;
+    font-size: smaller;
+    font-weight: 500;
+    color: darkblue;
+}
+.fas, .fa{
+    margin-right: 5px;
+}

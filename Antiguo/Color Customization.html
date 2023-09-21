@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karting Superstars</title>
+
+    <!-- Enlace al archivo CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Enlace al archivo JavaScript de jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Enlace al archivo JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./estilos.css">
+
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1>Karting Superstars</h1>
+        <p>Editar Colores de Pilotos Y Cascos.</p>
+
+        <form>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <p class="mono">
+                            <i class="fas fa-tshirt"></i>Hombros y Brazos
+                        </span>
+                        <p class="casco">
+                            <i class="fas fa-user"></i>1ª Raya
+                        </span>
+                        <input type="color" id="color1" name="color1" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <p class="mono">
+                            <i class="fas fa-tshirt"></i>Raya Superior
+                        </span>
+                        <p class="casco">
+                            <i class="fas fa-user"></i>2ª Raya
+                        </span>
+                        <input type="color" id="color2" name="color2" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <p class="mono">
+                            <i class="fas fa-tshirt"></i>Raya Inferior
+                        </span>
+                        <p class="casco">
+                            <i class="fas fa-user"></i>3ª Raya y Atrás
+                        </span>
+                        <input type="color" id="color3" name="color3" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <p class="mono">
+                            <i class="fas fa-tshirt"></i>Cuerpo y Guantes
+                        </span>
+                        <p class="casco">
+                            <i class="fas fa-user"></i>Frente
+                        </span>
+                        <input type="color" id="color4" name="color4" class="form-control">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contenedor">
+                            <div id="monoTorso"></div>
+                            <div id="monoBrazoI"></div>
+                            <div id="monoBrazoD"></div>
+                            <div id="monoTrasero"></div>
+                            <div id="monoPiernaI"></div>
+                            <div id="monoPiernaD"></div>
+                            <div id="monoRayaArriba"></div>
+                            <div id="monoRayaAbajo"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="contenedor casco">
+                            <div id="cascoFrente"></div>
+                            <div id="cascoVisera"></div>
+                            <div id="cascoRaya1"></div>
+                            <div id="cascoRaya2"></div>
+                            <div id="cascoRaya3"></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="jsonTextarea">JSON generado:</label>
+                        <textarea id="jsonTextarea" name="jsonTextarea" class="form-control" rows="6"></textarea>
+                    </div>
+                </div>
+
+
+
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <button id="enviarBtn" type="button" class="btn btn-primary">Generar</button>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <button id="copiarBtn" type="button" class="btn btn-secondary">
+                            <i class="fa fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <button id="editarBtn" type="button" class="btn btn-danger">Parsear</button>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <button id="pegarBtn" type="button" class="btn btn-warning">
+                            <i class="fas fa-paste"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+    
+    <script src="./scripts.js"></script>
+
+</body>
+
+</html>
