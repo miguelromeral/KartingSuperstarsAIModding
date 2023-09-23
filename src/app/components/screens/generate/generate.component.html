@@ -11,7 +11,14 @@
         <app-color-control [label]="'My color'" [id]="'iColor1'" (onChange)="racerColor1EventListener($event)"></app-color-control>
     </div>
 </div>
-
+<div class="row">
+    <app-dropdown-form-option 
+        [id]="'iHelmetMaterial'" 
+        [label]="'Helmet Material'" 
+        [options]="helmetMaterialsIds"
+        (onChange)="racerHelmetMaterialIdEventListener($event)"
+        ></app-dropdown-form-option>
+</div>
 <div class="row">
     <app-file-area></app-file-area>
 </div>

@@ -7,13 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { GenerateComponent } from './components/screens/generate/generate.component';
 import { ColorControlComponent } from './components/controls/color-control/color-control.component';
 import { FileAreaComponent } from './components/controls/file-area/file-area.component';
+import { DropdownFormOptionComponent } from './components/controls/dropdown-form-option/dropdown-form-option.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GenerateComponent,
     ColorControlComponent,
-    FileAreaComponent
+    FileAreaComponent,
+    DropdownFormOptionComponent
   ],
   imports: [
     BrowserModule,
