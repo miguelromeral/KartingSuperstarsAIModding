@@ -19,7 +19,8 @@ export class ColorControlComponent implements OnInit{
   constructor(private jsonService: JsonConverterService) { }
 
   ngOnInit(): void {
-    this.colorValue = this.jsonService.parseColor(this.stringValue);
+    this.colorValue = this.jsonService.stringToColor(this.stringValue);
     console.log(this.colorValue);
+    console.log(this.colorValue.toString());
   }
 }

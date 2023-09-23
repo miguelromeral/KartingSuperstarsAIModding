@@ -9,8 +9,9 @@ export class JsonConverterService {
   constructor() { }
 
 
+
   // Función para obtener los valores RGB de un color en formato "rgb(r, g, b)"
-  public parseColor(hexColor: string) : Color {
+  public stringToColor(hexColor: string) : Color {
     // Si el valor del color es en formato hexadecimal, conviértelo a RGB decimal
     if (hexColor.startsWith("#") && (hexColor.length === 4 || hexColor.length === 7)) {
         var r, g, b;
