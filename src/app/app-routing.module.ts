@@ -4,6 +4,7 @@ import { GenerateComponent } from './components/screens/generate/generate.compon
 
 const routes: Routes = [
   { path: 'generate', component: GenerateComponent },
+  { path: '', component: GenerateComponent },
   // Otras rutas pueden agregarse aquí
 ];
 

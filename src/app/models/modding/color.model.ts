@@ -3,7 +3,7 @@ export class Color {
   public g: number;
   public b: number;
 
-  constructor(r: number, g: number, b: number) {
+  constructor(r: number = Color.MAX_VALUE, g: number = Color.MAX_VALUE, b: number = Color.MAX_VALUE) {
     this.r = r;
     this.g = g;
     this.b = b
@@ -13,5 +13,7 @@ export class Color {
     return `rgb(${this.r},${this.g},${this.b})`;
   }
 
-  public static default = new Color(255, 255, 255);
+  
+  public static MIN_VALUE = 0;
+  public static MAX_VALUE = 255;
 }

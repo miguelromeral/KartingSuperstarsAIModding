@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Color } from 'src/app/models/modding/color.model';
 import { JsonConverterService } from 'src/app/services/json-converter.service';
 
@@ -7,20 +7,23 @@ import { JsonConverterService } from 'src/app/services/json-converter.service';
   templateUrl: './color-control.component.html',
   styleUrls: ['./color-control.component.scss']
 })
-export class ColorControlComponent implements OnInit{
+export class ColorControlComponent implements OnInit {
 
   @Input() public stringValue: string = '#FF0000';
   @Input() public label: string = 'Color';
   @Input() public id: string = 'colorInput';
-  public colorValue: Color = Color.default;
 
+  @Output() onChange = new EventEmitter<Color>();
 
+  public colorValue: Color = new Color();
 
   constructor(private jsonService: JsonConverterService) { }
 
   ngOnInit(): void {
+  }
+
+  sendValueToParent(): void {
     this.colorValue = this.jsonService.stringToColor(this.stringValue);
-    console.log(this.colorValue);
-    console.log(this.colorValue.toString());
+    this.onChange.emit(this.colorValue);
   }
 }

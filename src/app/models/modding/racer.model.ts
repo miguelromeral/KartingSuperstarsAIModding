@@ -6,16 +6,17 @@ import { Vehicle } from "./vehicle.model";
 export class Racer {
 
     constructor(
-        public racerName: string,
-        public driverSkin: DriverSkin,
-        public color1: Color,
-        public color2: Color,
-        public color3: Color,
-        public color4: Color,
-        public helmet: Helmet,
-        public idleAnimation: string,
-        public celebrationAnimation: string,
-        public vehicles: Vehicle[]
-    ) { }
+        public racerName: string = '',
+        public driverSkin: DriverSkin = new DriverSkin(),
+        public color1: Color = new Color(),
+        public color2: Color = new Color(),
+        public color3: Color = new Color(),
+        public color4: Color = new Color(),
+        public helmet: Helmet = new Helmet(),
+        public idleAnimation: string = '',
+        public celebrationAnimation: string = '',
+        public vehicles = [new Vehicle()]
+    ) { 
+    }
 
 }

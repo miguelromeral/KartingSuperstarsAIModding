@@ -2,4 +2,4 @@
 <label [for]="id" class="form-label">
     {{label}}
 </label>
-<input type="color" class="form-control form-control-color" [id]="id" [(ngModel)]="stringValue">
+<input type="color" class="form-control form-control-color" [id]="id" [(ngModel)]="stringValue" (change)="sendValueToParent()">
