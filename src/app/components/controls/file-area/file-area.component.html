@@ -1,4 +1,4 @@
 <div class="form-group">
     <label for="exampleTextarea">Texto en un TextArea:</label>
-    <textarea class="form-control" id="exampleTextarea" rows="20" cols="40">{{racerString}}</textarea>
+    <textarea class="form-control" id="exampleTextarea" rows="20" cols="40" (change)="onChangeTextArea($event)" [value]="racerString"></textarea>
 </div>

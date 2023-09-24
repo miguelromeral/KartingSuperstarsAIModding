@@ -6,19 +6,23 @@
 
     <div class="row">
         <div class="col-sm-3">
-            <app-color-control [id]="'iColor4'" [label]="'Color 1'" [defaultValue]="racer.color4.toStringHex()"
+            <app-color-control [id]="'iColor4'" [label]="'Color 1'" [defaultValue]="racer.driverSkin.color4.toStringHex()"
+                [colorValue]="racer.driverSkin.color4"
                 (onChange)="racerColor4EventListener($event)"></app-color-control>
         </div>
         <div class="col-sm-3">
-            <app-color-control [id]="'iColor1'" [label]="'Color 2'" [defaultValue]="racer.color1.toStringHex()"
+            <app-color-control [id]="'iColor1'" [label]="'Color 2'" [defaultValue]="racer.driverSkin.color1.toStringHex()"
+                [colorValue]="racer.driverSkin.color1"
                 (onChange)="racerColor1EventListener($event)"></app-color-control>
         </div>
         <div class="col-sm-3">
-            <app-color-control [id]="'iColor2'" [label]="'Color 3'" [defaultValue]="racer.color2.toStringHex()"
+            <app-color-control [id]="'iColor2'" [label]="'Color 3'" [defaultValue]="racer.driverSkin.color2.toStringHex()"
+                [colorValue]="racer.driverSkin.color2"
                 (onChange)="racerColor2EventListener($event)"></app-color-control>
         </div>
         <div class="col-sm-3">
-            <app-color-control [id]="'iColor3'" [label]="'Color 4'" [defaultValue]="racer.color3.toStringHex()"
+            <app-color-control [id]="'iColor3'" [label]="'Color 4'" [defaultValue]="racer.driverSkin.color3.toStringHex()"
+                [colorValue]="racer.driverSkin.color3"
                 (onChange)="racerColor3EventListener($event)"></app-color-control>
         </div>
     </div>
@@ -30,8 +34,7 @@
         </div>
         <div class="col-sm-12 col-md-6">
             <app-dropdown-form-option [id]="'iDriverSkinMaterial'" [label]="'Driver Skin Material'"
-                [options]="driverSkinMaterialIds"
-                [defaultValue]="racer.driverSkin.materialId"
+                [options]="driverSkinMaterialIds" [defaultValue]="racer.driverSkin.materialId"
                 (onChange)="racerDriverSkinMaterialEventListener($event)"></app-dropdown-form-option>
         </div>
         <div class="col-sm-12 col-md-6">
@@ -41,41 +44,53 @@
         </div>
         <div class="col-sm-12 col-md-6">
             <app-dropdown-form-option [id]="'iCelebrationAnimation'" [label]="'Celebration Animation'"
-                [options]="celebrationAnimations"
-                [defaultValue]="racer.celebrationAnimation"
+                [options]="celebrationAnimations" [defaultValue]="racer.celebrationAnimation"
                 (onChange)="racerCelebrationAnimationsEventListener($event)"></app-dropdown-form-option>
         </div>
     </div>
 </div>
 
-<div class="row">
-    <h4>Helmet</h4>
-    <div class="col-sm-12 col-md-4">
-        <app-dropdown-form-option [id]="'iHelmetId'" [label]="'Helmet'" [options]="helmetIds"
-            [defaultValue]="racer.helmet.id"
-            (onChange)="racerHelmetIdEventListener($event)"></app-dropdown-form-option>
+<div class="ks-section">
+    
+    <div class="row">
+        <h4 class="ks-section-title">Helmet</h4>
     </div>
-    <div class="col-sm-12 col-md-4">
-        <app-dropdown-form-option [id]="'iHelmetMaterial'" [label]="'Helmet Material'" [options]="helmetMaterialsIds"
-            [defaultValue]="racer.helmet.materialId"
-            (onChange)="racerHelmetMaterialIdEventListener($event)"></app-dropdown-form-option>
-    </div>
-    <div class="col-sm-12 col-md-4">
-        <app-dropdown-form-option [id]="'iHelmetVisorId'" [label]="'Visor'" [options]="visorIds"
-            [defaultValue]="racer.helmet.visorId"
-            (onChange)="racerHelmetVisorEventListener($event)"></app-dropdown-form-option>
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <app-dropdown-form-option [id]="'iHelmetId'" [label]="'Helmet'" [options]="helmetIds"
+                [defaultValue]="racer.helmet.id"
+                (onChange)="racerHelmetIdEventListener($event)"></app-dropdown-form-option>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <app-dropdown-form-option [id]="'iHelmetMaterial'" [label]="'Helmet Material'"
+                [options]="helmetMaterialsIds" [defaultValue]="racer.helmet.materialId"
+                (onChange)="racerHelmetMaterialIdEventListener($event)"></app-dropdown-form-option>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <app-dropdown-form-option [id]="'iHelmetVisorId'" [label]="'Visor'" [options]="visorIds"
+                [defaultValue]="racer.helmet.visorId"
+                (onChange)="racerHelmetVisorEventListener($event)"></app-dropdown-form-option>
+        </div>
     </div>
 </div>
-<div class="row">
-    <h4>Kart</h4>
 
-    <div class="col-sm-12 col-md-12">
-        <app-dropdown-form-option [id]="'iVehicleMaterial'" [label]="'Vehicle Material'" [options]="vehicleMaterialIds"
-            [defaultValue]="racer.vehicles[0].materialId"
-            (onChange)="racerVehicleMaterialEventListener($event)"></app-dropdown-form-option>
+<div class="ks-section">
+    <div class="row">
+        <h4 class="ks-section-title">Kart</h4>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <app-dropdown-form-option [id]="'iVehicleMaterial'" [label]="'Vehicle Material'"
+                [options]="vehicleMaterialIds" [defaultValue]="racer.vehicles[0].materialId"
+                (onChange)="racerVehicleMaterialEventListener($event)"></app-dropdown-form-option>
+        </div>
     </div>
 </div>
-<div class="row">
-    <h4>File Generated</h4>
-    <app-file-area></app-file-area>
+<div class="ks-section">
+    <div class="row">
+        <h4 class="ks-section-title">File Generated</h4>
+    </div>
+    <div class="row">
+        <app-file-area (onChange)="racerJsonGeneratedEventListener($event)"></app-file-area>
+    </div>
 </div>

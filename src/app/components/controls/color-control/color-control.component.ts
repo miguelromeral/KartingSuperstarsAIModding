@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Color } from 'src/app/models/modding/color.model';
 import { JsonConverterService } from 'src/app/services/json-converter.service';
 
@@ -16,13 +16,25 @@ export class ColorControlComponent implements OnInit {
 
   @Output() onChange = new EventEmitter<Color>();
 
-  public colorValue: Color = new Color();
+  @Input() public colorValue: Color = new Color();
 
   constructor(private jsonService: JsonConverterService) { }
 
   ngOnInit(): void {
     if(this.defaultValue != ''){
       this.stringValue = this.defaultValue;
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges){
+    if(changes['colorValue']){
+      const nuevoValor = changes['colorValue'].currentValue;
+      this.colorValue = new Color(
+        nuevoValor.r,
+        nuevoValor.g,
+        nuevoValor.b,
+      );
+      this.stringValue = this.colorValue.toStringHex();
     }
   }
 

@@ -48,4 +48,27 @@ export class JsonConverterService {
             return new Color(255, 255, 255);
         }
     }
+
+    public stringToColorHex(rgbString: string): string {
+        // Verifica si la cadena tiene el formato correcto "rgb(r, g, b)"
+        const match = rgbString.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+      
+        if (!match) {
+          throw new Error("Formato RGB no válido");
+        }
+      
+        const r = parseInt(match[1]);
+        const g = parseInt(match[2]);
+        const b = parseInt(match[3]);
+      
+        // Convierte los componentes RGB a valores hexadecimales
+        const hexR = r.toString(16).padStart(2, '0');
+        const hexG = g.toString(16).padStart(2, '0');
+        const hexB = b.toString(16).padStart(2, '0');
+      
+        // Combina los valores hexadecimales para formar el color hexadecimal
+        const hexColor = `#${hexR}${hexG}${hexB}`;
+      
+        return hexColor;
+      }
 }
