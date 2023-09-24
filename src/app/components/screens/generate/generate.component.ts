@@ -129,12 +129,66 @@ export class GenerateComponent implements OnInit{
     this.racer.helmet.visorId = visorId;
     this.jsonService.updateRacer(this.racer);
   }
+  racerHelmetColor1EventListener(newValue: Color) {
+    this.racer.helmet.color1 = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
+  racerHelmetColor2EventListener(newValue: Color) {
+    this.racer.helmet.color2 = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
+  racerHelmetColor3EventListener(newValue: Color) {
+    this.racer.helmet.color3 = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
+  racerHelmetColor4EventListener(newValue: Color) {
+    this.racer.helmet.color4 = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
 
   /* Vehicle */
   racerVehicleMaterialEventListener(nuevaVariable: string) {
     this.racer.vehicles[0].materialId = nuevaVariable;
     this.jsonService.updateRacer(this.racer);
   }
+
+  racerVehicleLiveryColor1EventListener(newValue: Color) {
+    this.racer.vehicles[0].liveryColor1 = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
+  racerVehicleLiveryColor2EventListener(newValue: Color) {
+    this.racer.vehicles[0].liveryColor2 = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
+  racerVehicleLiveryColor3EventListener(newValue: Color) {
+    this.racer.vehicles[0].liveryColor3 = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
+  racerVehicleLiveryColor4EventListener(newValue: Color) {
+    this.racer.vehicles[0].liveryColor4 = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
+  racerVehicleFrameColorEventListener(newValue: Color) {
+    this.racer.vehicles[0].frameColor = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
+  racerVehicleMetalHighlightsEventListener(newValue: Color) {
+    this.racer.vehicles[0].metalHighlightsColor = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
+  racerVehicleWheelHubColorEventListener(newValue: Color) {
+    this.racer.vehicles[0].wheelHubColor = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
+  racerVehicleSteeringWheelColor1EventListener(newValue: Color) {
+    this.racer.vehicles[0].steeringWheelColor1 = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
+  racerVehicleSteeringWheelColor2EventListener(newValue: Color) {
+    this.racer.vehicles[0].steeringWheelColor2 = newValue;
+    this.jsonService.updateRacer(this.racer);
+  }
+
 
   /* Text Area */
   racerJsonGeneratedEventListener(newRacer: Racer){

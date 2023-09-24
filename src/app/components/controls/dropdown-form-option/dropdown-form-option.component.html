@@ -1,6 +1,9 @@
 <div class="form-group">
-    <label [for]="id">{{label}}</label>
-    <select class="form-control" [id]="id" [(ngModel)]="stringValue" (change)="sendValueToParent()">
-        <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
-    </select>
+    <div class="ks-select-container">
+
+        <label class="ks-select-label" [for]="id">{{label}}</label>
+        <select class="form-control ks-select-control bg-dark text-white" [id]="id" [(ngModel)]="stringValue" (change)="sendValueToParent()">
+            <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
+        </select>
+    </div>
 </div>

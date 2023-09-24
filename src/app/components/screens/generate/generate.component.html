@@ -1,100 +1,177 @@
-<div class="ks-section">
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-4">
+        <div class="container">
+            <div class="ks-section">
+                <h4 class="ks-section-title">Driver</h4>
+            
+                <div class="row">
+                    <div class="col-sm-12">
+                        <app-dropdown-form-option [id]="'iDriverSkin'" [label]="'Driver Skin'" [options]="driverSkinIds"
+                            [defaultValue]="racer.driverSkin.id" [stringValue]="racer.driverSkin.id"
+                            (onChange)="racerDriverSkinEventListener($event)"></app-dropdown-form-option>
+                    </div>
+                    <div class="col-sm-12">
+                        <app-dropdown-form-option [id]="'iDriverSkinMaterial'" [label]="'Driver Skin Material'"
+                            [options]="driverSkinMaterialIds" [defaultValue]="racer.driverSkin.materialId"
+                            [stringValue]="racer.driverSkin.materialId"
+                            (onChange)="racerDriverSkinMaterialEventListener($event)"></app-dropdown-form-option>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 row-colors-driver">
+                        <app-color-control [id]="'iColor4'" [label]="'1'"
+                            [defaultValue]="racer.driverSkin.color4.toStringHex()" [colorValue]="racer.driverSkin.color4"
+                            (onChange)="racerColor4EventListener($event)"></app-color-control>
+                    
+                        <app-color-control [id]="'iColor1'" [label]="'2'"
+                            [defaultValue]="racer.driverSkin.color1.toStringHex()" [colorValue]="racer.driverSkin.color1"
+                            (onChange)="racerColor1EventListener($event)"></app-color-control>
+                    
+                        <app-color-control [id]="'iColor2'" [label]="'3'"
+                            [defaultValue]="racer.driverSkin.color2.toStringHex()" [colorValue]="racer.driverSkin.color2"
+                            (onChange)="racerColor2EventListener($event)"></app-color-control>
+                    
+                        <app-color-control [id]="'iColor3'" [label]="'4'"
+                            [defaultValue]="racer.driverSkin.color3.toStringHex()" [colorValue]="racer.driverSkin.color3"
+                            (onChange)="racerColor3EventListener($event)"></app-color-control>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ks-section">
+                <h4 class="ks-section-title">Helmet</h4>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <app-dropdown-form-option [id]="'iHelmetId'" [label]="'Helmet'" [options]="helmetIds"
+                            [defaultValue]="racer.helmet.id" [stringValue]="racer.helmet.id"
+                            (onChange)="racerHelmetIdEventListener($event)"></app-dropdown-form-option>
+                    </div>
+                    <div class="col-sm-12">
+                        <app-dropdown-form-option [id]="'iHelmetMaterial'" [label]="'Helmet Material'"
+                            [options]="helmetMaterialsIds" [defaultValue]="racer.helmet.materialId"
+                            [stringValue]="racer.helmet.materialId"
+                            (onChange)="racerHelmetMaterialIdEventListener($event)"></app-dropdown-form-option>
+                    </div>
+                    <div class="col-sm-12">
+                        <app-dropdown-form-option [id]="'iHelmetVisorId'" [label]="'Visor'" [options]="visorIds"
+                            [defaultValue]="racer.helmet.visorId" [stringValue]="racer.helmet.visorId"
+                            (onChange)="racerHelmetVisorEventListener($event)"></app-dropdown-form-option>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 row-colors-driver">
+                        <app-color-control [id]="'iHelmetColor4'" [label]="'1'"
+                            [defaultValue]="racer.helmet.color4.toStringHex()" [colorValue]="racer.helmet.color4"
+                            (onChange)="racerHelmetColor4EventListener($event)"></app-color-control>
+                    
+                        <app-color-control [id]="'iHelmetColor1'" [label]="'2'"
+                            [defaultValue]="racer.helmet.color1.toStringHex()" [colorValue]="racer.helmet.color1"
+                            (onChange)="racerHelmetColor1EventListener($event)"></app-color-control>
+                    
+                        <app-color-control [id]="'iHelmetColor2'" [label]="'3'"
+                            [defaultValue]="racer.helmet.color2.toStringHex()" [colorValue]="racer.helmet.color2"
+                            (onChange)="racerHelmetColor2EventListener($event)"></app-color-control>
+                    
+                        <app-color-control [id]="'iHelmetColor3'" [label]="'4'"
+                            [defaultValue]="racer.helmet.color3.toStringHex()" [colorValue]="racer.helmet.color3"
+                            (onChange)="racerHelmetColor3EventListener($event)"></app-color-control>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ks-section">
+                <h4 class="ks-section-title">Kart</h4>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <app-dropdown-form-option [id]="'iVehicleMaterial'" [label]="'Vehicle Material'"
+                            [options]="vehicleMaterialIds" [defaultValue]="racer.vehicles[0].materialId"
+                            [stringValue]="racer.vehicles[0].materialId"
+                            (onChange)="racerVehicleMaterialEventListener($event)"></app-dropdown-form-option>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-sm-12 row-colors-kart">
 
-    <div class="row">
-        <h4 class="ks-section-title">Driver</h4>
-    </div>
+                        <app-color-control [id]="'iLiveryColor1'" [label]="'1'" [colorValue]="racer.vehicles[0].liveryColor1"
+                            [defaultValue]="racer.vehicles[0].liveryColor1.toStringHex()"
+                            (onChange)="racerVehicleLiveryColor1EventListener($event)"></app-color-control>
 
-    <div class="row">
-        <div class="col-sm-3">
-            <app-color-control [id]="'iColor4'" [label]="'Color 1'" [defaultValue]="racer.driverSkin.color4.toStringHex()"
-                [colorValue]="racer.driverSkin.color4"
-                (onChange)="racerColor4EventListener($event)"></app-color-control>
-        </div>
-        <div class="col-sm-3">
-            <app-color-control [id]="'iColor1'" [label]="'Color 2'" [defaultValue]="racer.driverSkin.color1.toStringHex()"
-                [colorValue]="racer.driverSkin.color1"
-                (onChange)="racerColor1EventListener($event)"></app-color-control>
-        </div>
-        <div class="col-sm-3">
-            <app-color-control [id]="'iColor2'" [label]="'Color 3'" [defaultValue]="racer.driverSkin.color2.toStringHex()"
-                [colorValue]="racer.driverSkin.color2"
-                (onChange)="racerColor2EventListener($event)"></app-color-control>
-        </div>
-        <div class="col-sm-3">
-            <app-color-control [id]="'iColor3'" [label]="'Color 4'" [defaultValue]="racer.driverSkin.color3.toStringHex()"
-                [colorValue]="racer.driverSkin.color3"
-                (onChange)="racerColor3EventListener($event)"></app-color-control>
+                        <app-color-control [id]="'iLiveryColor2'" [label]="'2'" [colorValue]="racer.vehicles[0].liveryColor2"
+                            [defaultValue]="racer.vehicles[0].liveryColor2.toStringHex()"
+                            (onChange)="racerVehicleLiveryColor2EventListener($event)"></app-color-control>
+
+                        <app-color-control [id]="'iLiveryColor3'" [label]="'3'" [colorValue]="racer.vehicles[0].liveryColor3"
+                            [defaultValue]="racer.vehicles[0].liveryColor3.toStringHex()"
+                            (onChange)="racerVehicleLiveryColor3EventListener($event)"></app-color-control>
+
+                        <app-color-control [id]="'iLiveryColor4'" [label]="'4'" [colorValue]="racer.vehicles[0].liveryColor4"
+                            [defaultValue]="racer.vehicles[0].liveryColor4.toStringHex()"
+                            (onChange)="racerVehicleLiveryColor4EventListener($event)"></app-color-control>
+
+                        <app-color-control [id]="'iWheelHubColor'" [label]="'Wheel Hub'"
+                            [colorValue]="racer.vehicles[0].wheelHubColor"
+                            [defaultValue]="racer.vehicles[0].wheelHubColor.toStringHex()"
+                            (onChange)="racerVehicleWheelHubColorEventListener($event)"></app-color-control>
+                    
+                        <app-color-control [id]="'iFrameColor'" [label]="'Frame'" [colorValue]="racer.vehicles[0].frameColor"
+                            [defaultValue]="racer.vehicles[0].frameColor.toStringHex()"
+                            (onChange)="racerVehicleFrameColorEventListener($event)"></app-color-control>
+                    
+                        <app-color-control [id]="'iMetalHighlightColor'" [label]="'Metal Highlight'"
+                            [colorValue]="racer.vehicles[0].metalHighlightsColor"
+                            [defaultValue]="racer.vehicles[0].metalHighlightsColor.toStringHex()"
+                            (onChange)="racerVehicleMetalHighlightsEventListener($event)"></app-color-control>
+                    
+                        <app-color-control [id]="'iSteeringWheel1Color'" [label]="'Steering Wheel 1'"
+                            [colorValue]="racer.vehicles[0].steeringWheelColor1"
+                            [defaultValue]="racer.vehicles[0].steeringWheelColor1.toStringHex()"
+                            (onChange)="racerVehicleSteeringWheelColor1EventListener($event)"></app-color-control>
+                    
+                        <app-color-control [id]="'iSteeringWheel2Color'" [label]="'Steering Wheel 2'"
+                            [colorValue]="racer.vehicles[0].steeringWheelColor2"
+                            [defaultValue]="racer.vehicles[0].steeringWheelColor2.toStringHex()"
+                            (onChange)="racerVehicleSteeringWheelColor2EventListener($event)"></app-color-control>
+                        <div style="flex: 1 0 20%">
+                            
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="ks-section">
+                <h4 class="ks-section-title">Animations</h4>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <app-dropdown-form-option [id]="'iIdleAnimation'" [label]="'Idle Animation'" [options]="idsAnimations"
+                            [defaultValue]="racer.idleAnimation" [stringValue]="racer.idleAnimation"
+                            (onChange)="racerAnimationEventListener($event)"></app-dropdown-form-option>
+                    </div>
+                    <div class="col-sm-12">
+                        <app-dropdown-form-option [id]="'iCelebrationAnimation'" [label]="'Celebration Animation'"
+                            [options]="celebrationAnimations" [defaultValue]="racer.celebrationAnimation"
+                            [stringValue]="racer.celebrationAnimation"
+                            (onChange)="racerCelebrationAnimationsEventListener($event)"></app-dropdown-form-option>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-6">
-            <app-dropdown-form-option [id]="'iDriverSkin'" [label]="'Driver Skin'" [options]="driverSkinIds"
-                [defaultValue]="racer.driverSkin.id" [stringValue]="racer.driverSkin.id"
-                (onChange)="racerDriverSkinEventListener($event)"></app-dropdown-form-option>
-        </div>
-        <div class="col-sm-12 col-md-6">
-            <app-dropdown-form-option [id]="'iDriverSkinMaterial'" [label]="'Driver Skin Material'"
-                [options]="driverSkinMaterialIds" [defaultValue]="racer.driverSkin.materialId"
-                [stringValue]="racer.driverSkin.materialId"
-                (onChange)="racerDriverSkinMaterialEventListener($event)"></app-dropdown-form-option>
-        </div>
-        <div class="col-sm-12 col-md-6">
-            <app-dropdown-form-option [id]="'iIdleAnimation'" [label]="'Idle Animation'" [options]="idsAnimations"
-                [defaultValue]="racer.idleAnimation" [stringValue]="racer.idleAnimation"
-                (onChange)="racerAnimationEventListener($event)"></app-dropdown-form-option>
-        </div>
-        <div class="col-sm-12 col-md-6">
-            <app-dropdown-form-option [id]="'iCelebrationAnimation'" [label]="'Celebration Animation'"
-                [options]="celebrationAnimations" [defaultValue]="racer.celebrationAnimation"
-                [stringValue]="racer.celebrationAnimation"
-                (onChange)="racerCelebrationAnimationsEventListener($event)"></app-dropdown-form-option>
+    <div class="col-sm-12 col-md-12 col-lg-4">
+
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-4">
+        <div class="container">
+
+            <div class="ks-section">
+                <h4 class="ks-section-title">File Generated</h4>
+                <div class="row">
+                    <app-file-area (onChange)="racerJsonGeneratedEventListener($event)"></app-file-area>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="ks-section">
-    
-    <div class="row">
-        <h4 class="ks-section-title">Helmet</h4>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-4">
-            <app-dropdown-form-option [id]="'iHelmetId'" [label]="'Helmet'" [options]="helmetIds"
-                [defaultValue]="racer.helmet.id" [stringValue]="racer.helmet.id"
-                (onChange)="racerHelmetIdEventListener($event)"></app-dropdown-form-option>
-        </div>
-        <div class="col-sm-12 col-md-4">
-            <app-dropdown-form-option [id]="'iHelmetMaterial'" [label]="'Helmet Material'"
-                [options]="helmetMaterialsIds" [defaultValue]="racer.helmet.materialId"
-                [stringValue]="racer.helmet.materialId"
-                (onChange)="racerHelmetMaterialIdEventListener($event)"></app-dropdown-form-option>
-        </div>
-        <div class="col-sm-12 col-md-4">
-            <app-dropdown-form-option [id]="'iHelmetVisorId'" [label]="'Visor'" [options]="visorIds"
-                [defaultValue]="racer.helmet.visorId" [stringValue]="racer.helmet.visorId" 
-                (onChange)="racerHelmetVisorEventListener($event)"></app-dropdown-form-option>
-        </div>
-    </div>
-</div>
 
-<div class="ks-section">
-    <div class="row">
-        <h4 class="ks-section-title">Kart</h4>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12">
-            <app-dropdown-form-option [id]="'iVehicleMaterial'" [label]="'Vehicle Material'"
-                [options]="vehicleMaterialIds" [defaultValue]="racer.vehicles[0].materialId"
-                [stringValue]="racer.vehicles[0].materialId"
-                (onChange)="racerVehicleMaterialEventListener($event)"></app-dropdown-form-option>
-        </div>
-    </div>
-</div>
-<div class="ks-section">
-    <div class="row">
-        <h4 class="ks-section-title">File Generated</h4>
-    </div>
-    <div class="row">
-        <app-file-area (onChange)="racerJsonGeneratedEventListener($event)"></app-file-area>
-    </div>
-</div>
