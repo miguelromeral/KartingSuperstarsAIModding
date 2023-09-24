@@ -5,20 +5,76 @@
     </div>
 
 </div>
+<div class="ks-section">
+
+    <div class="row">
+        <h4 class="ks-section-title">Driver</h4>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <app-color-control [id]="'iColor4'" [label]="'Color 1'"
+                (onChange)="racerColor4EventListener($event)"></app-color-control>
+        </div>
+        <div class="col-sm-3">
+            <app-color-control [id]="'iColor1'" [label]="'Color 2'"
+                (onChange)="racerColor1EventListener($event)"></app-color-control>
+        </div>
+        <div class="col-sm-3">
+            <app-color-control [id]="'iColor2'" [label]="'Color 3'"
+                (onChange)="racerColor2EventListener($event)"></app-color-control>
+        </div>
+        <div class="col-sm-3">
+            <app-color-control [id]="'iColor3'" [label]="'Color 4'"
+                (onChange)="racerColor3EventListener($event)"></app-color-control>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <app-dropdown-form-option [id]="'iDriverSkin'" [label]="'Driver Skin'" [options]="driverSkinIds"
+                (onChange)="racerDriverSkinEventListener($event)"></app-dropdown-form-option>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <app-dropdown-form-option [id]="'iDriverSkinMaterial'" [label]="'Driver Skin Material'"
+                [options]="driverSkinMaterialIds"
+                (onChange)="racerDriverSkinMaterialEventListener($event)"></app-dropdown-form-option>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <app-dropdown-form-option [id]="'iIdleAnimation'" [label]="'Idle Animation'" [options]="idsAnimations"
+                (onChange)="racerAnimationEventListener($event)"></app-dropdown-form-option>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <app-dropdown-form-option [id]="'iCelebrationAnimation'" [label]="'Celebration Animation'"
+                [options]="celebrationAnimations"
+                (onChange)="racerCelebrationAnimationsEventListener($event)"></app-dropdown-form-option>
+        </div>
+    </div>
+</div>
 
 <div class="row">
-    <div class="col-sm-6">
-        <app-color-control [label]="'My color'" [id]="'iColor1'" (onChange)="racerColor1EventListener($event)"></app-color-control>
+    <h4>Helmet</h4>
+    <div class="col-sm-12 col-md-4">
+        <app-dropdown-form-option [id]="'iHelmetId'" [label]="'Helmet'" [options]="helmetIds"
+            (onChange)="racerHelmetIdEventListener($event)"></app-dropdown-form-option>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <app-dropdown-form-option [id]="'iHelmetMaterial'" [label]="'Helmet Material'" [options]="helmetMaterialsIds"
+            (onChange)="racerHelmetMaterialIdEventListener($event)"></app-dropdown-form-option>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <app-dropdown-form-option [id]="'iHelmetVisorId'" [label]="'Visor'" [options]="visorIds"
+            (onChange)="racerHelmetVisorEventListener($event)"></app-dropdown-form-option>
     </div>
 </div>
 <div class="row">
-    <app-dropdown-form-option 
-        [id]="'iHelmetMaterial'" 
-        [label]="'Helmet Material'" 
-        [options]="helmetMaterialsIds"
-        (onChange)="racerHelmetMaterialIdEventListener($event)"
-        ></app-dropdown-form-option>
+    <h4>Kart</h4>
+
+    <div class="col-sm-12 col-md-12">
+        <app-dropdown-form-option [id]="'iVehicleMaterial'" [label]="'Vehicle Material'" [options]="vehicleMaterialIds"
+            (onChange)="racerVehicleMaterialEventListener($event)"></app-dropdown-form-option>
+    </div>
 </div>
 <div class="row">
+    <h4>File Generated</h4>
     <app-file-area></app-file-area>
 </div>

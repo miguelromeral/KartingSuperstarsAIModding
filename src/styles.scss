@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: linear-gradient(135deg, #080a34, #a29aa9);
+}
+
+.ks-section-title {
+    display: flex;
+    border-bottom: 1px solid white;
+    margin: 0px 3px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ks-section {
+    background-color: #00000066;
+    border-radius: 6px;
+    padding: 20px 5px;
+    color: white;   
+}
