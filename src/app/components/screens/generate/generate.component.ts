@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { FormOption } from 'src/app/models/forms/form-option.model';
 import { Color } from 'src/app/models/modding/color.model';
+import { DriverSkin } from 'src/app/models/modding/driver-skin.model';
+import { Helmet } from 'src/app/models/modding/helmet.model';
 import { Racer } from 'src/app/models/modding/racer.model';
+import { Vehicle } from 'src/app/models/modding/vehicle.model';
 import { JsonConverterService } from 'src/app/services/json-converter.service';
 import { environment } from 'src/environments/environment';
 
@@ -13,8 +16,6 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./generate.component.scss']
 })
 export class GenerateComponent implements OnInit{
-
-  public racer: Racer = new Racer();
   
   /* Driver */
   public driverSkinIds: FormOption[] = FormOption.GetFromEnvironment(environment.driverSkinIds);
@@ -30,9 +31,48 @@ export class GenerateComponent implements OnInit{
   /* Vehicle */
   public vehicleMaterialIds: FormOption[] = FormOption.GetFromEnvironment(environment.vehicleMaterialIds);
 
-  constructor(private jsonService: JsonConverterService) { }
+  
+  public racer: Racer; 
+
+  constructor(private jsonService: JsonConverterService) { 
+    this.racer = new Racer(
+      'Miguel Romeral', 
+      new DriverSkin(
+        this.driverSkinIds[0].value,
+        this.driverSkinMaterialIds[0].value
+      ),
+      new Color(),
+      new Color(),
+      new Color(),
+      new Color(),
+      new Helmet(
+        this.helmetIds[0].value,
+        this.helmetMaterialsIds[0].value,
+        this.visorIds[0].value,
+        new Color(),
+        new Color(),
+        new Color()
+      ),
+      this.idsAnimations[0].value,
+      this.celebrationAnimations[0].value,
+      [new Vehicle(
+        'standard-kart',
+        this.vehicleMaterialIds[0].value,
+        new Color(),
+        new Color(),
+        new Color(),
+        new Color(),
+        new Color(),
+        new Color(),
+        new Color(),
+        new Color(),
+        new Color(),
+        1
+      )]);
+  }
 
   ngOnInit(): void {
+    this.jsonService.updateRacer(this.racer);
   }
 
   /* Driver */

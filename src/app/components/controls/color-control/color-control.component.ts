@@ -9,7 +9,8 @@ import { JsonConverterService } from 'src/app/services/json-converter.service';
 })
 export class ColorControlComponent implements OnInit {
 
-  @Input() public stringValue: string = '#FF0000';
+  public stringValue: string = '';
+  @Input() public defaultValue: string = '#FFFFFF';
   @Input() public label: string = 'Color';
   @Input() public id: string = 'colorInput';
 
@@ -20,6 +21,9 @@ export class ColorControlComponent implements OnInit {
   constructor(private jsonService: JsonConverterService) { }
 
   ngOnInit(): void {
+    if(this.defaultValue != ''){
+      this.stringValue = this.defaultValue;
+    }
   }
 
   sendValueToParent(): void {

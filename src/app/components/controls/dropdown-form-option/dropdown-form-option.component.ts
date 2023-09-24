@@ -11,6 +11,7 @@ export class DropdownFormOptionComponent implements OnInit{
 
   @Input() public id: string = 'selectInput';
   @Input() public label: string = 'Select';
+  @Input() public defaultValue: string = '';
   @Input() public options: FormOption[] = [];
   public stringValue: string = '';
   @Output() onChange = new EventEmitter<string>();
@@ -18,6 +19,9 @@ export class DropdownFormOptionComponent implements OnInit{
   constructor(private jsonService: JsonConverterService) { }
 
   ngOnInit(): void {
+    if(this.defaultValue != ''){
+      this.stringValue = this.defaultValue;
+    }
   }
 
   sendValueToParent(): void {

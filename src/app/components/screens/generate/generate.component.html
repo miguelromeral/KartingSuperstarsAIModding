@@ -1,10 +1,3 @@
-<div class="row">
-    <div class="col-sm-12">
-        Hello, World!
-
-    </div>
-
-</div>
 <div class="ks-section">
 
     <div class="row">
@@ -13,39 +6,43 @@
 
     <div class="row">
         <div class="col-sm-3">
-            <app-color-control [id]="'iColor4'" [label]="'Color 1'"
+            <app-color-control [id]="'iColor4'" [label]="'Color 1'" [defaultValue]="racer.color4.toStringHex()"
                 (onChange)="racerColor4EventListener($event)"></app-color-control>
         </div>
         <div class="col-sm-3">
-            <app-color-control [id]="'iColor1'" [label]="'Color 2'"
+            <app-color-control [id]="'iColor1'" [label]="'Color 2'" [defaultValue]="racer.color1.toStringHex()"
                 (onChange)="racerColor1EventListener($event)"></app-color-control>
         </div>
         <div class="col-sm-3">
-            <app-color-control [id]="'iColor2'" [label]="'Color 3'"
+            <app-color-control [id]="'iColor2'" [label]="'Color 3'" [defaultValue]="racer.color2.toStringHex()"
                 (onChange)="racerColor2EventListener($event)"></app-color-control>
         </div>
         <div class="col-sm-3">
-            <app-color-control [id]="'iColor3'" [label]="'Color 4'"
+            <app-color-control [id]="'iColor3'" [label]="'Color 4'" [defaultValue]="racer.color3.toStringHex()"
                 (onChange)="racerColor3EventListener($event)"></app-color-control>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-6">
             <app-dropdown-form-option [id]="'iDriverSkin'" [label]="'Driver Skin'" [options]="driverSkinIds"
+                [defaultValue]="racer.driverSkin.id"
                 (onChange)="racerDriverSkinEventListener($event)"></app-dropdown-form-option>
         </div>
         <div class="col-sm-12 col-md-6">
             <app-dropdown-form-option [id]="'iDriverSkinMaterial'" [label]="'Driver Skin Material'"
                 [options]="driverSkinMaterialIds"
+                [defaultValue]="racer.driverSkin.materialId"
                 (onChange)="racerDriverSkinMaterialEventListener($event)"></app-dropdown-form-option>
         </div>
         <div class="col-sm-12 col-md-6">
             <app-dropdown-form-option [id]="'iIdleAnimation'" [label]="'Idle Animation'" [options]="idsAnimations"
+                [defaultValue]="racer.idleAnimation"
                 (onChange)="racerAnimationEventListener($event)"></app-dropdown-form-option>
         </div>
         <div class="col-sm-12 col-md-6">
             <app-dropdown-form-option [id]="'iCelebrationAnimation'" [label]="'Celebration Animation'"
                 [options]="celebrationAnimations"
+                [defaultValue]="racer.celebrationAnimation"
                 (onChange)="racerCelebrationAnimationsEventListener($event)"></app-dropdown-form-option>
         </div>
     </div>
@@ -55,14 +52,17 @@
     <h4>Helmet</h4>
     <div class="col-sm-12 col-md-4">
         <app-dropdown-form-option [id]="'iHelmetId'" [label]="'Helmet'" [options]="helmetIds"
+            [defaultValue]="racer.helmet.id"
             (onChange)="racerHelmetIdEventListener($event)"></app-dropdown-form-option>
     </div>
     <div class="col-sm-12 col-md-4">
         <app-dropdown-form-option [id]="'iHelmetMaterial'" [label]="'Helmet Material'" [options]="helmetMaterialsIds"
+            [defaultValue]="racer.helmet.materialId"
             (onChange)="racerHelmetMaterialIdEventListener($event)"></app-dropdown-form-option>
     </div>
     <div class="col-sm-12 col-md-4">
         <app-dropdown-form-option [id]="'iHelmetVisorId'" [label]="'Visor'" [options]="visorIds"
+            [defaultValue]="racer.helmet.visorId"
             (onChange)="racerHelmetVisorEventListener($event)"></app-dropdown-form-option>
     </div>
 </div>
@@ -71,6 +71,7 @@
 
     <div class="col-sm-12 col-md-12">
         <app-dropdown-form-option [id]="'iVehicleMaterial'" [label]="'Vehicle Material'" [options]="vehicleMaterialIds"
+            [defaultValue]="racer.vehicles[0].materialId"
             (onChange)="racerVehicleMaterialEventListener($event)"></app-dropdown-form-option>
     </div>
 </div>
