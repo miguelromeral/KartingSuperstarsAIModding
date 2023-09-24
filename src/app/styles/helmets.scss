@@ -1,0 +1,50 @@
+.ks-helmet {
+  min-height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  position: absolute;
+  transform: skew(350deg);
+  top: 20px;
+  height: 120px;
+  left: 40px;
+  background-color: white;
+}
+
+.ks-helmet div {
+  position: absolute;
+  background-color: white;
+}
+
+.helmet-visor {
+  width: 70px;
+  height: 40px;
+  background-image: linear-gradient(to right, black, gray) !important;
+  top: 90px;
+  /* left: 24px; */
+  border: 1px solid black;
+  z-index: 2;
+}
+
+.ks-helmet-0-color1 {
+  width: 150px;
+  height: 100%;
+}
+
+.ks-helmet-0-color2 {    
+  width: 20px;
+  height: 100%;
+  right: 100px;
+  left: 100px;
+}
+
+.ks-helmet-0-color3 {    
+  width: 20px;
+  left: 130px;
+  height: 100%;
+}
+
+.ks-helmet-0-color4 {    
+  width: 40px;
+  height: 100%;
+  right: 0px;
+}

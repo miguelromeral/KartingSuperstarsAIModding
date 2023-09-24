@@ -132,18 +132,22 @@ export class GenerateComponent implements OnInit{
   racerHelmetColor1EventListener(newValue: Color) {
     this.racer.helmet.color1 = newValue;
     this.jsonService.updateRacer(this.racer);
+    this.changeColorsByClassName(newValue, "helmet-color2");
   }
   racerHelmetColor2EventListener(newValue: Color) {
     this.racer.helmet.color2 = newValue;
     this.jsonService.updateRacer(this.racer);
+    this.changeColorsByClassName(newValue, "helmet-color3");
   }
   racerHelmetColor3EventListener(newValue: Color) {
     this.racer.helmet.color3 = newValue;
     this.jsonService.updateRacer(this.racer);
+    this.changeColorsByClassName(newValue, "helmet-color4");
   }
   racerHelmetColor4EventListener(newValue: Color) {
     this.racer.helmet.color4 = newValue;
     this.jsonService.updateRacer(this.racer);
+    this.changeColorsByClassName(newValue, "ks-helmet");
   }
 
   /* Vehicle */
@@ -195,5 +199,16 @@ export class GenerateComponent implements OnInit{
     this.racer = newRacer;
     this.jsonService.updateRacer(this.racer);
     this.cdr.detectChanges();
+  }
+
+  
+  /* Utilities */
+  public changeColorsByClassName(color: Color, className: string){
+    let elements = document.getElementsByClassName(className);
+    
+    for (let i = 0; i < elements.length; i++) {
+      const element = elements[i] as HTMLElement;
+      element.style.backgroundColor = color.toStringHex();
+    }
   }
 }

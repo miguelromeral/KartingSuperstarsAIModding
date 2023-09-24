@@ -8,6 +8,7 @@ import { GenerateComponent } from './components/screens/generate/generate.compon
 import { ColorControlComponent } from './components/controls/color-control/color-control.component';
 import { FileAreaComponent } from './components/controls/file-area/file-area.component';
 import { DropdownFormOptionComponent } from './components/controls/dropdown-form-option/dropdown-form-option.component';
+import { PrevisualizeItemComponent } from './components/screens/previsualize-item/previsualize-item.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DropdownFormOptionComponent } from './components/controls/dropdown-form
     GenerateComponent,
     ColorControlComponent,
     FileAreaComponent,
-    DropdownFormOptionComponent
+    DropdownFormOptionComponent,
+    PrevisualizeItemComponent
   ],
   imports: [
     BrowserModule,

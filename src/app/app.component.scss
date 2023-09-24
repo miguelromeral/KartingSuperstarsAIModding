@@ -24,3 +24,28 @@
   ::-webkit-scrollbar-track {
     background-color: #f1f1f1;
   }
+
+
+
+
+
+input[type='color'] {
+  min-height: 70px;
+  border-radius: 10px;
+}
+
+.mono{
+  margin: 0px;
+  font-size: smaller;
+  font-weight: 500;
+  color: darkgreen;
+}
+.casco{
+  margin: 0px;
+  font-size: smaller;
+  font-weight: 500;
+  color: darkblue;
+}
+.fas, .fa{
+  margin-right: 5px;
+}

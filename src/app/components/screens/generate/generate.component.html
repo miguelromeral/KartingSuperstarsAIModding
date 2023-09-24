@@ -3,7 +3,7 @@
         <div class="container">
             <div class="ks-section">
                 <h4 class="ks-section-title">Driver</h4>
-            
+
                 <div class="row">
                     <div class="col-sm-12">
                         <app-dropdown-form-option [id]="'iDriverSkin'" [label]="'Driver Skin'" [options]="driverSkinIds"
@@ -20,24 +20,28 @@
                 <div class="row">
                     <div class="col-sm-12 row-colors-driver">
                         <app-color-control [id]="'iColor4'" [label]="'1'"
-                            [defaultValue]="racer.driverSkin.color4.toStringHex()" [colorValue]="racer.driverSkin.color4"
+                            [defaultValue]="racer.driverSkin.color4.toStringHex()"
+                            [colorValue]="racer.driverSkin.color4"
                             (onChange)="racerColor4EventListener($event)"></app-color-control>
-                    
+
                         <app-color-control [id]="'iColor1'" [label]="'2'"
-                            [defaultValue]="racer.driverSkin.color1.toStringHex()" [colorValue]="racer.driverSkin.color1"
+                            [defaultValue]="racer.driverSkin.color1.toStringHex()"
+                            [colorValue]="racer.driverSkin.color1"
                             (onChange)="racerColor1EventListener($event)"></app-color-control>
-                    
+
                         <app-color-control [id]="'iColor2'" [label]="'3'"
-                            [defaultValue]="racer.driverSkin.color2.toStringHex()" [colorValue]="racer.driverSkin.color2"
+                            [defaultValue]="racer.driverSkin.color2.toStringHex()"
+                            [colorValue]="racer.driverSkin.color2"
                             (onChange)="racerColor2EventListener($event)"></app-color-control>
-                    
+
                         <app-color-control [id]="'iColor3'" [label]="'4'"
-                            [defaultValue]="racer.driverSkin.color3.toStringHex()" [colorValue]="racer.driverSkin.color3"
+                            [defaultValue]="racer.driverSkin.color3.toStringHex()"
+                            [colorValue]="racer.driverSkin.color3"
                             (onChange)="racerColor3EventListener($event)"></app-color-control>
                     </div>
                 </div>
             </div>
-            
+
             <div class="ks-section">
                 <h4 class="ks-section-title">Helmet</h4>
                 <div class="row">
@@ -63,22 +67,22 @@
                         <app-color-control [id]="'iHelmetColor4'" [label]="'1'"
                             [defaultValue]="racer.helmet.color4.toStringHex()" [colorValue]="racer.helmet.color4"
                             (onChange)="racerHelmetColor4EventListener($event)"></app-color-control>
-                    
+
                         <app-color-control [id]="'iHelmetColor1'" [label]="'2'"
                             [defaultValue]="racer.helmet.color1.toStringHex()" [colorValue]="racer.helmet.color1"
                             (onChange)="racerHelmetColor1EventListener($event)"></app-color-control>
-                    
+
                         <app-color-control [id]="'iHelmetColor2'" [label]="'3'"
                             [defaultValue]="racer.helmet.color2.toStringHex()" [colorValue]="racer.helmet.color2"
                             (onChange)="racerHelmetColor2EventListener($event)"></app-color-control>
-                    
+
                         <app-color-control [id]="'iHelmetColor3'" [label]="'4'"
                             [defaultValue]="racer.helmet.color3.toStringHex()" [colorValue]="racer.helmet.color3"
                             (onChange)="racerHelmetColor3EventListener($event)"></app-color-control>
                     </div>
                 </div>
             </div>
-            
+
             <div class="ks-section">
                 <h4 class="ks-section-title">Kart</h4>
                 <div class="row">
@@ -90,22 +94,26 @@
                     </div>
                 </div>
                 <div class="row">
-                    
+
                     <div class="col-sm-12 row-colors-kart">
 
-                        <app-color-control [id]="'iLiveryColor1'" [label]="'1'" [colorValue]="racer.vehicles[0].liveryColor1"
+                        <app-color-control [id]="'iLiveryColor1'" [label]="'1'"
+                            [colorValue]="racer.vehicles[0].liveryColor1"
                             [defaultValue]="racer.vehicles[0].liveryColor1.toStringHex()"
                             (onChange)="racerVehicleLiveryColor1EventListener($event)"></app-color-control>
 
-                        <app-color-control [id]="'iLiveryColor2'" [label]="'2'" [colorValue]="racer.vehicles[0].liveryColor2"
+                        <app-color-control [id]="'iLiveryColor2'" [label]="'2'"
+                            [colorValue]="racer.vehicles[0].liveryColor2"
                             [defaultValue]="racer.vehicles[0].liveryColor2.toStringHex()"
                             (onChange)="racerVehicleLiveryColor2EventListener($event)"></app-color-control>
 
-                        <app-color-control [id]="'iLiveryColor3'" [label]="'3'" [colorValue]="racer.vehicles[0].liveryColor3"
+                        <app-color-control [id]="'iLiveryColor3'" [label]="'3'"
+                            [colorValue]="racer.vehicles[0].liveryColor3"
                             [defaultValue]="racer.vehicles[0].liveryColor3.toStringHex()"
                             (onChange)="racerVehicleLiveryColor3EventListener($event)"></app-color-control>
 
-                        <app-color-control [id]="'iLiveryColor4'" [label]="'4'" [colorValue]="racer.vehicles[0].liveryColor4"
+                        <app-color-control [id]="'iLiveryColor4'" [label]="'4'"
+                            [colorValue]="racer.vehicles[0].liveryColor4"
                             [defaultValue]="racer.vehicles[0].liveryColor4.toStringHex()"
                             (onChange)="racerVehicleLiveryColor4EventListener($event)"></app-color-control>
 
@@ -113,39 +121,41 @@
                             [colorValue]="racer.vehicles[0].wheelHubColor"
                             [defaultValue]="racer.vehicles[0].wheelHubColor.toStringHex()"
                             (onChange)="racerVehicleWheelHubColorEventListener($event)"></app-color-control>
-                    
-                        <app-color-control [id]="'iFrameColor'" [label]="'Frame'" [colorValue]="racer.vehicles[0].frameColor"
+
+                        <app-color-control [id]="'iFrameColor'" [label]="'Frame'"
+                            [colorValue]="racer.vehicles[0].frameColor"
                             [defaultValue]="racer.vehicles[0].frameColor.toStringHex()"
                             (onChange)="racerVehicleFrameColorEventListener($event)"></app-color-control>
-                    
+
                         <app-color-control [id]="'iMetalHighlightColor'" [label]="'Metal Highlight'"
                             [colorValue]="racer.vehicles[0].metalHighlightsColor"
                             [defaultValue]="racer.vehicles[0].metalHighlightsColor.toStringHex()"
                             (onChange)="racerVehicleMetalHighlightsEventListener($event)"></app-color-control>
-                    
+
                         <app-color-control [id]="'iSteeringWheel1Color'" [label]="'Steering Wheel 1'"
                             [colorValue]="racer.vehicles[0].steeringWheelColor1"
                             [defaultValue]="racer.vehicles[0].steeringWheelColor1.toStringHex()"
                             (onChange)="racerVehicleSteeringWheelColor1EventListener($event)"></app-color-control>
-                    
+
                         <app-color-control [id]="'iSteeringWheel2Color'" [label]="'Steering Wheel 2'"
                             [colorValue]="racer.vehicles[0].steeringWheelColor2"
                             [defaultValue]="racer.vehicles[0].steeringWheelColor2.toStringHex()"
                             (onChange)="racerVehicleSteeringWheelColor2EventListener($event)"></app-color-control>
                         <div style="flex: 1 0 20%">
-                            
+
                         </div>
                     </div>
                 </div>
-            
+
             </div>
-            
+
             <div class="ks-section">
                 <h4 class="ks-section-title">Animations</h4>
                 <div class="row">
                     <div class="col-sm-12">
-                        <app-dropdown-form-option [id]="'iIdleAnimation'" [label]="'Idle Animation'" [options]="idsAnimations"
-                            [defaultValue]="racer.idleAnimation" [stringValue]="racer.idleAnimation"
+                        <app-dropdown-form-option [id]="'iIdleAnimation'" [label]="'Idle Animation'"
+                            [options]="idsAnimations" [defaultValue]="racer.idleAnimation"
+                            [stringValue]="racer.idleAnimation"
                             (onChange)="racerAnimationEventListener($event)"></app-dropdown-form-option>
                     </div>
                     <div class="col-sm-12">
@@ -160,6 +170,27 @@
     </div>
     <div class="col-sm-12 col-md-12 col-lg-4">
 
+        <div class="container">
+            <div class="ks-section">
+                <h4 class="ks-section-title">Previsualize</h4>
+                <app-previsualize-item [selectedOption]="racer.helmet.materialId">
+
+                    <div id="helmetmaterial-modern-full-face-0" class="ks-preview-item-show ks-preview-container">
+                        <div class="ks-helmet">
+                            <div class="helmet-visor"></div>
+                            <div class="helmet-color2 ks-helmet-0-color2"></div>
+                            <div class="helmet-color3 ks-helmet-0-color3"></div>
+                            <div class="helmet-color4 ks-helmet-0-color4"></div>
+                        </div>
+                    </div>
+                    <div id="helmetmaterial-modern-full-face-1">
+                        Helmet 1
+                    </div>
+
+                </app-previsualize-item>
+            </div>
+        </div>
+
     </div>
     <div class="col-sm-12 col-md-12 col-lg-4">
         <div class="container">
@@ -173,5 +204,3 @@
         </div>
     </div>
 </div>
-
-
