@@ -29,22 +29,24 @@
     <div class="row">
         <div class="col-sm-12 col-md-6">
             <app-dropdown-form-option [id]="'iDriverSkin'" [label]="'Driver Skin'" [options]="driverSkinIds"
-                [defaultValue]="racer.driverSkin.id"
+                [defaultValue]="racer.driverSkin.id" [stringValue]="racer.driverSkin.id"
                 (onChange)="racerDriverSkinEventListener($event)"></app-dropdown-form-option>
         </div>
         <div class="col-sm-12 col-md-6">
             <app-dropdown-form-option [id]="'iDriverSkinMaterial'" [label]="'Driver Skin Material'"
                 [options]="driverSkinMaterialIds" [defaultValue]="racer.driverSkin.materialId"
+                [stringValue]="racer.driverSkin.materialId"
                 (onChange)="racerDriverSkinMaterialEventListener($event)"></app-dropdown-form-option>
         </div>
         <div class="col-sm-12 col-md-6">
             <app-dropdown-form-option [id]="'iIdleAnimation'" [label]="'Idle Animation'" [options]="idsAnimations"
-                [defaultValue]="racer.idleAnimation"
+                [defaultValue]="racer.idleAnimation" [stringValue]="racer.idleAnimation"
                 (onChange)="racerAnimationEventListener($event)"></app-dropdown-form-option>
         </div>
         <div class="col-sm-12 col-md-6">
             <app-dropdown-form-option [id]="'iCelebrationAnimation'" [label]="'Celebration Animation'"
                 [options]="celebrationAnimations" [defaultValue]="racer.celebrationAnimation"
+                [stringValue]="racer.celebrationAnimation"
                 (onChange)="racerCelebrationAnimationsEventListener($event)"></app-dropdown-form-option>
         </div>
     </div>
@@ -58,17 +60,18 @@
     <div class="row">
         <div class="col-sm-12 col-md-4">
             <app-dropdown-form-option [id]="'iHelmetId'" [label]="'Helmet'" [options]="helmetIds"
-                [defaultValue]="racer.helmet.id"
+                [defaultValue]="racer.helmet.id" [stringValue]="racer.helmet.id"
                 (onChange)="racerHelmetIdEventListener($event)"></app-dropdown-form-option>
         </div>
         <div class="col-sm-12 col-md-4">
             <app-dropdown-form-option [id]="'iHelmetMaterial'" [label]="'Helmet Material'"
                 [options]="helmetMaterialsIds" [defaultValue]="racer.helmet.materialId"
+                [stringValue]="racer.helmet.materialId"
                 (onChange)="racerHelmetMaterialIdEventListener($event)"></app-dropdown-form-option>
         </div>
         <div class="col-sm-12 col-md-4">
             <app-dropdown-form-option [id]="'iHelmetVisorId'" [label]="'Visor'" [options]="visorIds"
-                [defaultValue]="racer.helmet.visorId"
+                [defaultValue]="racer.helmet.visorId" [stringValue]="racer.helmet.visorId" 
                 (onChange)="racerHelmetVisorEventListener($event)"></app-dropdown-form-option>
         </div>
     </div>
@@ -82,6 +85,7 @@
         <div class="col-sm-12 col-md-12">
             <app-dropdown-form-option [id]="'iVehicleMaterial'" [label]="'Vehicle Material'"
                 [options]="vehicleMaterialIds" [defaultValue]="racer.vehicles[0].materialId"
+                [stringValue]="racer.vehicles[0].materialId"
                 (onChange)="racerVehicleMaterialEventListener($event)"></app-dropdown-form-option>
         </div>
     </div>

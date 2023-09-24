@@ -139,12 +139,6 @@ export class GenerateComponent implements OnInit{
   /* Text Area */
   racerJsonGeneratedEventListener(newRacer: Racer){
     this.racer = newRacer;
-    // this.racer.color1.r = newRacer.color1.r;
-    // this.racer.color1.g = newRacer.color1.g;
-    // this.racer.color1.b = newRacer.color1.b;
-    // this.racer.color2 = newRacer.color2;
-    // this.racer.color3 = newRacer.color3;
-    // this.racer.color4 = newRacer.color4;
     this.jsonService.updateRacer(this.racer);
     this.cdr.detectChanges();
   }
