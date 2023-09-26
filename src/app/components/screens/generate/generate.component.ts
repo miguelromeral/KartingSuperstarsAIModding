@@ -78,6 +78,11 @@ export class GenerateComponent implements OnInit{
     });
   }
 
+  racerRacerNameEventListener() {
+    console.log("---->");
+    this.jsonService.updateRacer(this.racer);
+  }
+
   /* Driver */
   racerDriverSkinEventListener(newValue: string) {
     this.racer.driverSkin.id = newValue;

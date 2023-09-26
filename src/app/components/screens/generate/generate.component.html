@@ -6,6 +6,14 @@
 
                 <div class="row">
                     <div class="col-sm-12">
+                        <div class="ks-input-container">
+                            <label for="iRacerName" class="form-label ks-label">Email address</label>
+                            <input type="email" class="form-control ks-text-control bg-dark text-white" id="iRacerName" 
+                                [(ngModel)]="racer.racerName"
+                                (ngModelChange)="racerRacerNameEventListener()">                    
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
                         <app-dropdown-form-option [id]="'iDriverSkin'" [label]="'Driver Skin'" [options]="driverSkinIds"
                             [defaultValue]="racer.driverSkin.id" [stringValue]="racer.driverSkin.id"
                             (onChange)="racerDriverSkinEventListener($event)"></app-dropdown-form-option>

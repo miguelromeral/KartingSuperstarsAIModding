@@ -1,19 +1,11 @@
-.ks-select-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 5px 10px;
-}
+@import '../../../styles/variables.scss';
 
-.ks-select-label{
-    flex: 1;
-}
 
 .ks-select-control{
     flex: 1;
     text-align: center;
     font-weight: 600;
-    background-color: #383959 !important;
+    background-color: $color-background-ks-input !important;
     color: white;
     cursor: pointer;
     border: none;
