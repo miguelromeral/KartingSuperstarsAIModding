@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="ks-input-container">
-                            <label for="iRacerName" class="form-label ks-label">Email address</label>
+                            <label for="iRacerName" class="form-label ks-label">Racer Name</label>
                             <input type="email" class="form-control ks-text-control bg-dark text-white" id="iRacerName" 
                                 [(ngModel)]="racer.racerName"
                                 (ngModelChange)="racerRacerNameEventListener()">                    
@@ -99,6 +99,15 @@
                             [options]="vehicleMaterialIds" [defaultValue]="racer.vehicles[0].materialId"
                             [stringValue]="racer.vehicles[0].materialId"
                             (onChange)="racerVehicleMaterialEventListener($event)"></app-dropdown-form-option>
+                    </div>
+                    
+                    <div class="col-sm-12">
+                        <div class="ks-input-container">
+                            <label for="iKartSymbol" class="form-label ks-label">Number</label>
+                            <input type="number" min="0" max="99" class="form-control ks-text-control bg-dark text-white" id="iKartSymbol" 
+                                [(ngModel)]="racer.vehicles[0].symbol"
+                                (ngModelChange)="racerVehicleSymbolEventListener()">                    
+                        </div>
                     </div>
                 </div>
                 <div class="row">

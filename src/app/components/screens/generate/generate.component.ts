@@ -79,7 +79,6 @@ export class GenerateComponent implements OnInit{
   }
 
   racerRacerNameEventListener() {
-    console.log("---->");
     this.jsonService.updateRacer(this.racer);
   }
 
@@ -198,6 +197,9 @@ export class GenerateComponent implements OnInit{
     this.jsonService.updateRacer(this.racer);
   }
 
+  racerVehicleSymbolEventListener() {
+    this.jsonService.updateRacer(this.racer);
+  }
 
   /* Text Area */
   racerJsonGeneratedEventListener(newRacer: Racer){
