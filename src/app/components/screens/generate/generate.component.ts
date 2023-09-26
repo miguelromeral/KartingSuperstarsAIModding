@@ -198,6 +198,12 @@ export class GenerateComponent implements OnInit{
   racerJsonGeneratedEventListener(newRacer: Racer){
     this.racer = newRacer;
     this.jsonService.updateRacer(this.racer);
+    
+    this.changeColorsByClassName(this.racer.helmet.color1, "helmet-color2");
+    this.changeColorsByClassName(this.racer.helmet.color2, "helmet-color3");
+    this.changeColorsByClassName(this.racer.helmet.color3, "helmet-color4");
+    this.changeColorsByClassName(this.racer.helmet.color4, "ks-helmet");
+
     this.cdr.detectChanges();
   }
 
