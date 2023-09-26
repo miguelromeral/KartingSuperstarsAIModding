@@ -103,18 +103,22 @@ export class GenerateComponent implements OnInit{
   racerColor1EventListener(nuevaVariable: Color) {
     this.racer.driverSkin.color1 = nuevaVariable;
     this.jsonService.updateRacer(this.racer);
+    this.changeColorsByClassName(nuevaVariable, "suit-color-2");
   }
   racerColor2EventListener(nuevaVariable: Color) {
     this.racer.driverSkin.color2 = nuevaVariable;
     this.jsonService.updateRacer(this.racer);
+    this.changeColorsByClassName(nuevaVariable, "suit-color-3");
   }
   racerColor3EventListener(nuevaVariable: Color) {
     this.racer.driverSkin.color3 = nuevaVariable;
     this.jsonService.updateRacer(this.racer);
+    this.changeColorsByClassName(nuevaVariable, "suit-color-4");
   }
   racerColor4EventListener(nuevaVariable: Color) {
     this.racer.driverSkin.color4 = nuevaVariable;
     this.jsonService.updateRacer(this.racer);
+    this.changeColorsByClassName(nuevaVariable, "suit-color-1");
   }
 
   /* Helmet */
@@ -206,6 +210,11 @@ export class GenerateComponent implements OnInit{
     this.racer = newRacer;
     this.jsonService.updateRacer(this.racer);
     
+    this.changeColorsByClassName(this.racer.driverSkin.color1, "suit-color-2");
+    this.changeColorsByClassName(this.racer.driverSkin.color2, "suit-color-3");
+    this.changeColorsByClassName(this.racer.driverSkin.color3, "suit-color-4");
+    this.changeColorsByClassName(this.racer.driverSkin.color4, "suit-color-1");
+
     this.changeColorsByClassName(this.racer.helmet.color1, "helmet-color2");
     this.changeColorsByClassName(this.racer.helmet.color2, "helmet-color3");
     this.changeColorsByClassName(this.racer.helmet.color3, "helmet-color4");
