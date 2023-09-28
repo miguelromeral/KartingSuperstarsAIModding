@@ -1,0 +1,44 @@
+<div id="standard-kart" class="ks-preview-container ks-preview-item-show">
+    <div class="ks-standard-kart">
+        <div class="ks-kart-wheels">
+            <div class="ks-kart-wheel-fr">
+                <div class="ks-kart-wheelhub" [ngStyle]="{'background-color':vehicle.wheelHubColor}"></div>
+            </div>
+            <div class="ks-kart-wheel-fl">
+                <div class="ks-kart-wheelhub" [ngStyle]="{'background-color':vehicle.wheelHubColor}"></div>
+            </div>
+            <div class="ks-kart-wheel-rr">
+                <div class="ks-kart-wheelhub" [ngStyle]="{'background-color':vehicle.wheelHubColor}"></div>
+            </div>
+            <div class="ks-kart-wheel-rl">
+                <div class="ks-kart-wheelhub" [ngStyle]="{'background-color':vehicle.wheelHubColor}"></div>
+            </div>
+        </div>
+        <div class="ks-kart-frame">
+            <div class="ks-kart-frame-rr" [ngStyle]="{'background-color':vehicle.frameColor}"></div>
+            <div class="ks-kart-frame-rl" [ngStyle]="{'background-color':vehicle.frameColor}"></div>
+            <div class="ks-kart-frame-fr" [ngStyle]="{'background-color':vehicle.frameColor}"></div>
+            <div class="ks-kart-frame-fl" [ngStyle]="{'background-color':vehicle.frameColor}"></div>
+            <div class="ks-kart-frame-highlight-r" [ngStyle]="{'background-color':vehicle.metalHighlightsColor}"></div>
+            <div class="ks-kart-frame-highlight-l" [ngStyle]="{'background-color':vehicle.metalHighlightsColor}"></div>
+        </div>
+        <div class="ks-kart-body">
+            <div class="ks-kart-body-front" [ngStyle]="{'background-color':vehicle.liveryColor1}"></div>
+            <div class="ks-kart-body-front-wing-r" [ngStyle]="{'background-color':vehicle.liveryColor1}"></div>
+            <div class="ks-kart-body-front-wing-l" [ngStyle]="{'background-color':vehicle.liveryColor1}"></div>
+            <div class="ks-kart-body-front-nose" [ngStyle]="{'background-color':vehicle.liveryColor1}"></div>
+            <div class="ks-kart-body-front-side-r" [ngStyle]="{'background-color':vehicle.liveryColor1}"></div>
+            <div class="ks-kart-body-front-side-l" [ngStyle]="{'background-color':vehicle.liveryColor1}"></div>
+            <div class="ks-kart-body-back"></div>
+            <div class="ks-kart-body-symbol-front">
+                <span id="pSymbol">{{vehicle.symbol}}</span>
+            </div>
+        </div>
+        <div class="ks-kart-steering">
+            <div class="ks-kart-steering-main" [ngStyle]="{'border-color':vehicle.steeringWheelColor1}"></div>
+            <div class="ks-kart-steering-top-container">
+                <div class="ks-kart-steering-top" [ngStyle]="{'border-color':vehicle.steeringWheelColor2}"></div>
+            </div>
+        </div>
+    </div>
+</div>

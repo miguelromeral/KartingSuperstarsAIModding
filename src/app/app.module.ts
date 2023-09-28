@@ -9,6 +9,8 @@ import { ColorControlComponent } from './components/controls/color-control/color
 import { FileAreaComponent } from './components/controls/file-area/file-area.component';
 import { DropdownFormOptionComponent } from './components/controls/dropdown-form-option/dropdown-form-option.component';
 import { PrevisualizeItemComponent } from './components/screens/previsualize-item/previsualize-item.component';
+import { KartBaseComponent } from './components/karts/karts-components';
+import { KartOfkComponent } from './components/karts/kart-ofk/kart-ofk.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { PrevisualizeItemComponent } from './components/screens/previsualize-ite
     ColorControlComponent,
     FileAreaComponent,
     DropdownFormOptionComponent,
-    PrevisualizeItemComponent
+    PrevisualizeItemComponent,
+    KartBaseComponent,
+    KartOfkComponent
   ],
   imports: [
     BrowserModule,
