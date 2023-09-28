@@ -3,10 +3,12 @@
 
 @import './app/styles/suits.scss';
 @import './app/styles/helmets.scss';
+@import './app/styles/karts.scss';
 
 
 body {
     background-image: linear-gradient(135deg, #080a34, #a29aa9);
+    background-repeat: space;
 }
 
 .ks-section-title {

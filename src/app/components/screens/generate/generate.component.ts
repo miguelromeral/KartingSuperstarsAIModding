@@ -191,6 +191,7 @@ export class GenerateComponent implements OnInit{
   racerVehicleWheelHubColorEventListener(newValue: Color) {
     this.racer.vehicles[0].wheelHubColor = newValue;
     this.jsonService.updateRacer(this.racer);
+    this.changeColorsByClassName(newValue, "ks-kart-wheelhub");
   }
   racerVehicleSteeringWheelColor1EventListener(newValue: Color) {
     this.racer.vehicles[0].steeringWheelColor1 = newValue;
@@ -219,7 +220,7 @@ export class GenerateComponent implements OnInit{
     this.changeColorsByClassName(this.racer.helmet.color2, "helmet-color3");
     this.changeColorsByClassName(this.racer.helmet.color3, "helmet-color4");
     this.changeColorsByClassName(this.racer.helmet.color4, "ks-helmet");
-
+    
     this.cdr.detectChanges();
   }
 

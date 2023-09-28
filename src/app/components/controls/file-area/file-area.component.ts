@@ -30,15 +30,21 @@ export class FileAreaComponent implements OnInit {
     this.generateJson();
   }
 
+  debugAddAlonso(){
+    this.racerString = '{"racerName":"Fernando ALONSO","driverSkin":{"id":"driverskin-classic-m","materialId":"driverskinmaterial-classic-m-0","color1":{"r":43,"g":110,"b":97},"color2":{"r":43,"g":110,"b":97},"color3":{"r":255,"g":255,"b":255},"color4":{"r":43,"g":110,"b":97}},"helmet":{"id":"helmet-0-modern-full-face","materialId":"helmetmaterial-modern-full-face-3","visorId":"visor-black","color1":{"r":36,"g":91,"b":255},"color2":{"r":36,"g":160,"b":255},"color3":{"r":255,"g":31,"b":31},"color4":{"r":214,"g":255,"b":10}},"idleAnimation":"driveranimation-idle-01","celebrationAnimation":"driveranimation-celebration-13","vehicles":[{"id":"standard-kart","materialId":"vehiclematerial-standard-kart-1","liveryColor1":{"r":43,"g":110,"b":97},"liveryColor2":{"r":43,"g":110,"b":97},"liveryColor3":{"r":202,"g":216,"b":105},"liveryColor4":{"r":43,"g":110,"b":97},"frameColor":{"r":0,"g":0,"b":0},"metalHighlightsColor":{"r":0,"g":0,"b":0},"wheelHubColor":{"r":0,"g":0,"b":0},"steeringWheelColor1":{"r":0,"g":0,"b":0},"steeringWheelColor2":{"r":0,"g":0,"b":0},"symbol":14}]}';
+    this.emitChange(JSON.parse(this.racerString));
+  }
+
   generateJson(){
-    console.log("Nuevo JSON", this.racer);
-    this.racerString = JSON.stringify(this.racer, null, 4);
-    
+    this.racerString = JSON.stringify(this.racer, null, 4);  
   }  
 
   onChangeTextArea(event: any){
+    this.emitChange(JSON.parse(event.target.value));
+  }
+
+  emitChange(generated: any){
     try{
-      const generated = JSON.parse(event.target.value);
       const newRacer = new Racer(
         generated.racerName,
         new DriverSkin(

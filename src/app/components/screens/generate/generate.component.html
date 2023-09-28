@@ -8,9 +8,8 @@
                     <div class="col-sm-12">
                         <div class="ks-input-container">
                             <label for="iRacerName" class="form-label ks-label">Racer Name</label>
-                            <input type="email" class="form-control ks-text-control bg-dark text-white" id="iRacerName" 
-                                [(ngModel)]="racer.racerName"
-                                (ngModelChange)="racerRacerNameEventListener()">                    
+                            <input type="email" class="form-control ks-text-control bg-dark text-white" id="iRacerName"
+                                [(ngModel)]="racer.racerName" (ngModelChange)="racerRacerNameEventListener()">
                         </div>
                     </div>
                     <div class="col-sm-12">
@@ -100,13 +99,14 @@
                             [stringValue]="racer.vehicles[0].materialId"
                             (onChange)="racerVehicleMaterialEventListener($event)"></app-dropdown-form-option>
                     </div>
-                    
+
                     <div class="col-sm-12">
                         <div class="ks-input-container">
                             <label for="iKartSymbol" class="form-label ks-label">Number</label>
-                            <input type="number" min="0" max="99" class="form-control ks-text-control bg-dark text-white" id="iKartSymbol" 
+                            <input type="number" min="0" max="99"
+                                class="form-control ks-text-control bg-dark text-white" id="iKartSymbol"
                                 [(ngModel)]="racer.vehicles[0].symbol"
-                                (ngModelChange)="racerVehicleSymbolEventListener()">                    
+                                (ngModelChange)="racerVehicleSymbolEventListener()">
                         </div>
                     </div>
                 </div>
@@ -250,6 +250,52 @@
                             <div class="suit-color-2 ks-suit-leg-d"></div>
                             <div class="suit-color-3 ks-suit-line-up"></div>
                             <div class="suit-color-4 ks-suit-line-down"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div id="standard-kart" class="ks-preview-container ks-preview-item-show">
+                        <div class="ks-standard-kart">
+                            <div class="ks-kart-wheels">
+                                <div class="ks-kart-wheel-fr">
+                                    <div class="ks-kart-wheelhub" [ngStyle]="{'background-color':racer.vehicles[0].wheelHubColor}"></div>
+                                </div>
+                                <div class="ks-kart-wheel-fl">
+                                    <div class="ks-kart-wheelhub" [ngStyle]="{'background-color':racer.vehicles[0].wheelHubColor}"></div>
+                                </div>
+                                <div class="ks-kart-wheel-rr">
+                                    <div class="ks-kart-wheelhub" [ngStyle]="{'background-color':racer.vehicles[0].wheelHubColor}"></div>
+                                </div>
+                                <div class="ks-kart-wheel-rl">
+                                    <div class="ks-kart-wheelhub" [ngStyle]="{'background-color':racer.vehicles[0].wheelHubColor}"></div>
+                                </div>
+                            </div>
+                            <div class="ks-kart-frame">
+                                <div class="ks-kart-frame-rr" [ngStyle]="{'background-color':racer.vehicles[0].frameColor}"></div>
+                                <div class="ks-kart-frame-rl" [ngStyle]="{'background-color':racer.vehicles[0].frameColor}"></div>
+                                <div class="ks-kart-frame-fr" [ngStyle]="{'background-color':racer.vehicles[0].frameColor}"></div>
+                                <div class="ks-kart-frame-fl" [ngStyle]="{'background-color':racer.vehicles[0].frameColor}"></div>
+                                <div class="ks-kart-frame-highlight-r" [ngStyle]="{'background-color':racer.vehicles[0].metalHighlightsColor}"></div>
+                                <div class="ks-kart-frame-highlight-l" [ngStyle]="{'background-color':racer.vehicles[0].metalHighlightsColor}"></div>
+                            </div>
+                            <div class="ks-kart-body">
+                                <div class="ks-kart-body-front" [ngStyle]="{'background-color':racer.vehicles[0].liveryColor1}"></div>
+                                <div class="ks-kart-body-front-wing-r" [ngStyle]="{'background-color':racer.vehicles[0].liveryColor1}"></div>
+                                <div class="ks-kart-body-front-wing-l" [ngStyle]="{'background-color':racer.vehicles[0].liveryColor1}"></div>
+                                <div class="ks-kart-body-front-nose" [ngStyle]="{'background-color':racer.vehicles[0].liveryColor1}"></div>
+                                <div class="ks-kart-body-front-side-r" [ngStyle]="{'background-color':racer.vehicles[0].liveryColor1}"></div>
+                                <div class="ks-kart-body-front-side-l" [ngStyle]="{'background-color':racer.vehicles[0].liveryColor1}"></div>
+                                <div class="ks-kart-body-back"></div>
+                                <div class="ks-kart-body-symbol-front">
+                                    <span id="pSymbol">{{racer.vehicles[0].symbol}}</span>
+                                </div>
+                            </div>
+                            <div class="ks-kart-steering">
+                                <div class="ks-kart-steering-main" [ngStyle]="{'border-color':racer.vehicles[0].steeringWheelColor1}"></div>
+                                <div class="ks-kart-steering-top-container">
+                                    <div class="ks-kart-steering-top" [ngStyle]="{'border-color':racer.vehicles[0].steeringWheelColor2}"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

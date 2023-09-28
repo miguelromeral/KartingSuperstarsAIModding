@@ -1,0 +1,244 @@
+@import 'karts/ofk.scss';
+
+.ks-standard-kart {
+    min-height: 400px;
+    height: 400px;
+    min-width: 300px;
+    width: 300px;
+    border: 1px solid black;
+    position: relative;
+    top: 20px;
+    height: 120px;
+}
+
+.ks-standard-kart div {
+    position: absolute;
+    background-color: white;
+}
+
+.ks-standard-kart .ks-kart-wheels,
+.ks-standard-kart .ks-kart-frame,
+.ks-standard-kart .ks-kart-body {
+    position: relative;
+}
+
+.ks-standard-kart .ks-kart-wheels>div {
+    background-color: #151515;
+    border: 1px solid #626262;
+    z-index: 50;
+    height: 70px;
+    width: 50px;
+    border-radius: 20px;
+}
+
+.ks-standard-kart .ks-kart-wheels .ks-kart-wheel-fr {
+    top: 250px;
+    left: $wheels-separation;
+}
+
+.ks-standard-kart .ks-kart-wheels .ks-kart-wheel-fl {
+    top: 250px;
+    right: $wheels-separation;
+}
+
+.ks-standard-kart .ks-kart-wheels .ks-kart-wheel-rr,
+.ks-standard-kart .ks-kart-wheels .ks-kart-wheel-rl {
+    width: 60px;
+}
+
+.ks-standard-kart .ks-kart-wheels .ks-kart-wheel-rr {
+    top: 50px;
+    left: $wheels-separation;
+}
+
+.ks-standard-kart .ks-kart-wheels .ks-kart-wheel-rl {
+    top: 50px;
+    right: $wheels-separation;
+}
+
+.ks-standard-kart .ks-kart-wheels .ks-kart-wheelhub {
+    z-index: 51;
+    width: 5px;
+    height: 45px;
+    top: 13px;
+}
+
+.ks-kart-wheel-fl>.ks-kart-wheelhub,
+.ks-kart-wheel-rl>.ks-kart-wheelhub {
+    right: 0px;
+}
+
+// .ks-standard-kart .ks-kart-frame div{
+//     background-color: pink !important;
+// }
+
+
+.ks-standard-kart .ks-kart-frame .ks-kart-frame-rr,
+.ks-standard-kart .ks-kart-frame .ks-kart-frame-rl {
+    width: $frame-size;
+    height: 100px;
+    top: 100px;
+}
+
+.ks-standard-kart .ks-kart-frame .ks-kart-frame-rr {
+    left: $frame-rear-padding;
+}
+
+.ks-standard-kart .ks-kart-frame .ks-kart-frame-rl {
+    right: $frame-rear-padding;
+}
+
+.ks-standard-kart .ks-kart-frame .ks-kart-frame-fr,
+.ks-standard-kart .ks-kart-frame .ks-kart-frame-fl {
+    width: $frame-size;
+    height: 100px;
+    top: 200px;
+    right: 85px;
+}
+
+.ks-standard-kart .ks-kart-frame .ks-kart-frame-fr {
+    left: $frame-front-padding;
+}
+
+.ks-standard-kart .ks-kart-frame .ks-kart-frame-fl {
+    right: $frame-front-padding;
+}
+
+
+
+.ks-standard-kart {
+    .ks-kart-body {
+        .ks-kart-body-front {
+            width: inherit;
+            height: 40px;
+            top: 340px;
+            left: $wheels-separation;
+            right: $wheels-separation;
+            border-radius: $kart-body-border-radius;
+        }
+
+        .ks-kart-body-front-wing-r,
+        .ks-kart-body-front-wing-l {
+            border-radius: $kart-body-border-radius;
+            height: 55px;
+            top: 325px;
+            width: 70px;
+        }
+
+        .ks-kart-body-front-wing-r {
+            left: $wheels-separation;
+        }
+
+        .ks-kart-body-front-wing-l {
+            right: $wheels-separation;
+        }
+
+        .ks-kart-body-front-nose {
+            border-radius: $kart-body-border-radius;
+            height: 160px;
+            top: 220px;
+            width: inherit;
+            right: 115px;
+            left: 115px;
+        }
+
+
+        .ks-kart-body-front-side-r,
+        .ks-kart-body-front-side-l {
+            border-radius: $kart-body-border-radius;
+            height: 120px;
+            top: 125px;
+            width: 35px;
+        }
+
+        .ks-kart-body-front-side-r {
+            left: $wheels-separation;
+        }
+
+        .ks-kart-body-front-side-l {
+            right: $wheels-separation;
+        }
+
+        .ks-kart-body-back {
+            background-color: black;
+            width: inherit;
+            height: 40px;
+            top: 5px;
+            left: $wheels-separation;
+            right: $wheels-separation;
+            border-radius: $kart-body-border-radius;
+        }
+
+        .ks-kart-body-symbol-front {
+            width: inherit;
+            border-radius: $kart-body-border-radius;
+            z-index: 80;
+            background-color: rgb(255, 225, 0);
+            color: black;
+            font-weight: 600;
+            height: 50px;
+            top: 230px;
+            left: 118px;
+            right: 118px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: xx-large;
+            font-family: sans-serif;
+        }
+    }
+
+    .ks-kart-frame {
+
+        .ks-kart-frame-highlight-r,
+        .ks-kart-frame-highlight-l {
+            width: 2px;
+            height: 200px;
+            top: 100px;
+        }
+
+        .ks-kart-frame-highlight-r {
+            left: $frame-highlight-padding;
+        }
+
+        .ks-kart-frame-highlight-l {
+            right: $frame-highlight-padding;
+        }
+    }
+
+    .ks-kart-steering {
+        top: 155px;
+        left: 120px;
+        z-index: 400;
+
+        .ks-kart-steering-main {
+            width: $kart-steering-wheel-size;
+            height: $kart-steering-wheel-size;
+            border-radius: 100%;
+            z-index: 20;
+            background: transparent;
+            border-width: $kart-steering-wheel-width;
+            border-style: solid;
+        }
+
+        .ks-kart-steering-top-container {
+            width: $kart-steering-wheel-size;
+            height: 20px;
+            top: 40px;
+            background-color: transparent !important;
+            overflow: hidden;
+
+            .ks-kart-steering-top {
+                width: $kart-steering-wheel-size;
+                height: $kart-steering-wheel-size;
+                z-index: 21;
+                border-radius: 100%;
+                background: transparent;
+                border-width: $kart-steering-wheel-width;
+                border-style: solid;
+                top: -40px;
+            }
+        }
+    }
+}
