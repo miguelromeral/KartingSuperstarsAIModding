@@ -16,8 +16,14 @@
 
 .ks-standard-kart .ks-kart-wheels,
 .ks-standard-kart .ks-kart-frame,
-.ks-standard-kart .ks-kart-body {
+.ks-standard-kart .ks-kart-body,
+.ks-standard-kart .ks-kart-body-work {
     position: relative;
+}
+
+.ks-standard-kart .ks-kart-body-work {
+    height: 100%;
+    background-color: transparent;
 }
 
 .ks-standard-kart .ks-kart-wheels>div {

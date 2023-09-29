@@ -1,3 +1,4 @@
+@import '../../../styles/variables.scss';
 
 // .ks-standard-kart .ks-kart-wheels>div {
 //     background-color: red !important;
@@ -7,3 +8,121 @@
 //     width: 50px;
 //     border-radius: 20px;
 // }
+
+
+.front-wing-symbol-1,
+.front-wing-symbol-2 {
+    width: auto;
+    border-radius: $kart-ofk-body-work-radius;
+}
+
+.front-wing-symbol-1 {
+    height: 50px;
+    bottom: 90px;
+    left: 130px;
+    right: 130px;
+}
+
+.front-wing-symbol-2 {
+    height: 50px;
+    bottom: 60px;
+    left: 140px;
+    right: 140px;
+}
+
+.front-wing-side-1,
+.front-wing-side-2{
+    width: 50px;
+    border-radius: $kart-ofk-body-work-radius;
+    height: 30px;
+    bottom: 44px;
+}
+
+.front-wing-side-1{
+    left: 40px;
+}
+
+.front-wing-side-2{
+    right: 40px;
+}
+
+.front-wing-bottom {
+    border-radius: $kart-ofk-body-work-radius;
+    width: auto;
+    height: 20px;
+    left: 110px;
+    right: 110px;
+    bottom: 19px;
+}
+
+.front-wing-top {
+    border-radius: $kart-ofk-body-work-radius;
+    width: auto;
+    height: 29px;
+    bottom: 150px;
+    left: 115px;
+    right: 115px;
+}
+
+
+.side-r,
+.side-l {
+    border-radius: $kart-ofk-body-work-radius;
+    top: 170px;
+    width: 10px;
+    height: 70px;
+}
+
+.side-r {
+    left: 25px;
+}
+
+.side-l {
+    right: 25px;
+}
+
+.front-wing-3-top {
+    border-radius: $kart-ofk-body-work-radius;
+    width: auto;
+    height: 29px;
+    bottom: 150px;
+    left: 125px;
+    right: 125px;
+    z-index: 20;
+}
+
+
+.front-wing-3-side-r,
+.front-wing-3-side-l {
+    border-radius: $kart-ofk-body-work-radius;
+    bottom: 20px;
+    width: 10px;
+    height: 53px;
+}
+
+.front-wing-3-side-r {
+    left: 22px;
+}
+
+.front-wing-3-side-l {
+    right: 22px;
+}
+
+
+
+
+.front-wing-3-nose-r,
+.front-wing-3-nose-l {
+    border-radius: $kart-ofk-body-work-radius;
+    bottom: 40px;
+    width: 16px;
+    height: 47px;
+}
+
+.front-wing-3-nose-r {
+    left: 120px;
+}
+
+.front-wing-3-nose-l {
+    right: 120px;
+}
